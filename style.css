@@ -1,0 +1,283 @@
+body{
+    background: red; 
+    margin: 0px;
+    padding: 0px;;
+}
+h1{
+    margin: 0px;
+    padding: 0px;
+}
+#bannerID{}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0px;
+    background: #FF5733;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.bannerimg{
+    position: absolute;
+    width: 100%;
+    height: 85vh;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+.bannerimg img{
+   
+    height: 85vh;
+}
+.bannerDesc{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 15vh;
+    bottom: 0;
+    overflow: hidden;
+}
+
+
+  .firstHead{
+    position: relative;
+    animation-name: textmove;
+    animation-duration: 20s;
+    
+    animation-iteration-count: infinite;
+    text-align: left;
+    color: #fff;
+    line-height: 15vh;
+    
+  }
+  @keyframes textmove {
+  
+   
+    0%   { left:0px;}
+    
+    100%   {left:100%; }
+    
+  }
+
+.bodySec{
+width: 100%;
+height: 100vh;
+position: relative;
+}
+.leftTopDiv{
+position: absolute;
+top: 0px;
+left: 0px;
+width: 50%;
+height: 50vh;
+background-color: aqua;
+z-index: 1;
+transition: 3s;
+text-align: center;
+}
+.leftTopDiv:hover{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 90%;
+    height: 90vh;
+    background-color: aqua;
+    z-index: 9999;
+    }
+.rightTopDiv{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50%;
+    height: 50vh;
+    background-color: coral;
+    z-index: 1;
+    overflow: hidden;
+    transition: 3s;
+}
+.rightTopDiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 3s;
+}
+.rightTopDiv:hover img{
+    transform: scale(1.5);
+}
+
+.rightBottomDiv{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 50%;
+    height: 50vh;
+    background-color: #FFC300;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    transition: 3s;
+
+}
+.rightBottomDiv:hover{
+    background: #3498DB;
+}
+.rightBottomDiv img{
+    height: 300px;
+}
+.afterdie{
+    display: none;
+    transition: 3s;
+}
+.rightBottomDiv:hover .afterdie{
+    display: block;
+   
+    
+}
+.rightBottomDiv:hover .alive{
+    display: none
+}
+.rightBottomDiv::before{
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    border: 10px solid #581845 ;
+    border-radius: 100%;
+    transition: 3s;
+    z-index: -1;
+    
+
+}
+.rightBottomDiv:hover::before{
+    content: '';
+    position: absolute;
+    bottom: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    background-color: transparent;
+    border: 10px solid #900C3F ;
+    border-radius: 100%;
+    
+
+}
+.leftBottomDiv{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 50%;
+    height: 50vh;
+    background-color: #FF5733;
+    z-index: 1;
+    display: flex;
+    
+}
+
+.leftBottomFirst {
+    width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: red;
+  position: relative;
+  animation-name: exampleone;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  box-shadow: 0px 0px 10px 2px #ffffff;
+  left:10%;
+  transform: translateX(10%);
+  }
+  @keyframes exampleone {
+    from {top: 0px; background-color: rgb(15, 168, 36);}
+  to {top: 100%; background-color: rgb(255, 196, 0);}
+    
+  }
+
+  .leftBottomSecond {
+    width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: red;
+  position: relative;
+  animation-name: examplesecond;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  box-shadow: 0px 0px 10px 2px #ffffff;
+  left:50%;
+  transform: translateX(50%);
+  }
+  
+  @keyframes examplesecond {
+    from {top: 0px; background-color: rgb(15, 69, 168);}
+  to {top: 100%; background-color: rgb(255, 0, 55);}
+    
+  }
+  .leftBottomThird {
+    width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: red;
+  position: relative;
+  animation-name: examplethird;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  box-shadow: 0px 0px 10px 2px #ffffff;
+  left:25%;
+  transform: translateX(25%);
+  }
+  
+  @keyframes examplethird {
+    from {top: 0px; background-color: rgb(172, 52, 22);}
+  to {top: 100%; background-color: rgb(0, 247, 255);}
+    
+  }
+  .leftBottomFourth {
+    width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: red;
+  position: relative;
+  animation-name: examplefour;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  box-shadow: 0px 0px 10px 2px #ffffff;
+  left:65%;
+  transform: translateX(65%);
+  }
+  
+  @keyframes examplefour {
+    from {top: 0px; background-color: rgb(134, 62, 143);}
+  to {top: 100%; background-color: rgb(233, 5, 5);}
+    
+  }
+
+@media (max-width: 600px) {
+    .bannerimg img{
+        width: 100%;
+        height: 85vh;
+    }
+    .firstHead{
+        padding-top: 10px;
+        animation-duration: 10s;
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .leftTopDiv, .rightTopDiv, .leftBottomDiv, .rightBottomDiv{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+}
